@@ -1,69 +1,126 @@
-# 🎙️ AI Voice Assistant
+# 🎙️ Maaz AI Assistant — Voice-Powered AI Chat Agent
 
-A full-stack voice-powered AI assistant built with Mistral AI, SpeechRecognition, pyttsx3, and Streamlit.
+> A real-time, browser-based voice assistant powered by **Mistral AI** and the **Web Speech API**. Talk to it — it listens, thinks, and speaks back in a natural human voice. Built with Python + Streamlit.
 
-## Features
-- 🎙️ **Microphone input** — captures voice via SpeechRecognition (Google STT, free)
-- 🤖 **Mistral AI** — generates intelligent, conversational replies
-- 🔊 **Text-to-speech** — speaks responses aloud via pyttsx3 (offline, no API key needed)
-- 💬 **Chat UI** — full conversation history in a clean Streamlit interface
-- ⌨️ **Text fallback** — also supports typed input
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.35+-red?style=flat-square&logo=streamlit)
+![Mistral AI](https://img.shields.io/badge/Mistral_AI-API-orange?style=flat-square)
+![Web Speech API](https://img.shields.io/badge/Web_Speech-API-green?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)
 
-## Setup
+---
 
-### 1. Install dependencies
+## ✨ Features
 
+- 🎙️ **Always-on voice listening** — click once, it keeps listening after every reply
+- 🤖 **Mistral AI backend** — fast, intelligent conversational responses
+- 🔊 **Natural voice output** — uses browser's Neural TTS (Google/Microsoft voices)
+- 💬 **Text input fallback** — type if you prefer
+- 🧠 **Conversation memory** — remembers context across the full session
+- ⚡ **Zero heavy dependencies** — no PyAudio, no C++ build tools needed
+- 🌐 **Runs in the browser** — works on Windows, Mac, Linux
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| **LLM / AI** | Mistral AI (`mistral-small-latest`) |
+| **Speech-to-Text** | Web Speech API (Chrome/Edge built-in) |
+| **Text-to-Speech** | Web Speech Synthesis API (Neural voices) |
+| **UI Framework** | Streamlit + HTML/CSS/JS component |
+| **Language** | Python 3.10+ |
+| **API Client** | OpenAI-compatible SDK → Mistral endpoint |
+
+---
+
+## 🚀 Quick Start
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/maazzalii/maaz-ai-assistant.git
+cd maaz-ai-assistant
+```
+
+### 2. Create a virtual environment
+```bash
+python -m venv venv
+
+# Windows:
+venv\Scripts\activate
+
+# Mac/Linux:
+source venv/bin/activate
+```
+
+### 3. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-> **Windows users:** If `pyaudio` fails, install it via:
-> ```bash
-> pip install pipwin && pipwin install pyaudio
-> ```
->
-> **Linux users:**
-> ```bash
-> sudo apt-get install portaudio19-dev python3-pyaudio
-> ```
+### 4. Add your Mistral API key
 
-### 2. Add your Mistral API key
-
-Get a free key at [console.mistral.ai](https://console.mistral.ai), then:
-
+Create the file `.streamlit/secrets.toml`:
 ```toml
-# .streamlit/secrets.toml
-MISTRAL_API_KEY = "your_key_here"
+MISTRAL_API_KEY = "your_mistral_api_key_here"
 ```
 
-### 3. Run
+> 🔑 Get a **free** API key at [console.mistral.ai](https://console.mistral.ai)
 
+### 5. Run the app
 ```bash
 streamlit run app.py
 ```
 
-## Tech Stack
+Open **Chrome or Edge** at `http://localhost:8501`
 
-| Layer | Tool |
-|-------|------|
-| LLM | Mistral AI (`mistral-small-latest`) |
-| Speech-to-Text | SpeechRecognition + Google STT (free) |
-| Text-to-Speech | pyttsx3 (offline) |
-| UI | Streamlit |
-| Language | Python 3.10+ |
+---
 
-## Project Structure
+## 🎮 How to Use
+
+1. Click the **🎙️ mic button** — turns red, starts listening
+2. **Speak naturally** — auto-transcribes and replies
+3. After replying, **auto-resumes listening** for your next message
+4. Click **⏹️** anytime to stop
+5. Toggle **🔊 Speak** to turn voice on/off
+6. Or just **type** in the text box
+
+---
+
+## 📁 Project Structure
 
 ```
-ai_voice_assistant/
-├── app.py                  # Main application
-├── requirements.txt
+maaz-ai-assistant/
+│
+├── app.py                   # Main app (Streamlit + JS voice engine)
+├── requirements.txt         # Python dependencies
 ├── .streamlit/
-│   └── secrets.toml        # API key (never commit this)
+│   └── secrets.toml         # API key — DO NOT commit this
+├── .gitignore
 └── README.md
 ```
 
-## CV Description
+---
 
-> **AI Voice Assistant** · Python, Mistral AI, SpeechRecognition, pyttsx3, Streamlit  
-> Built a real-time voice assistant integrating speech-to-text input, Mistral LLM responses, and offline text-to-speech output in a conversational Streamlit UI with full message history.
+## ⚠️ Browser Compatibility
+
+| Browser | Works? |
+|---------|--------|
+| ✅ Google Chrome | Full support |
+| ✅ Microsoft Edge | Full support |
+| ❌ Firefox | Not supported |
+
+> Use **Google Chrome** for the best experience.
+
+---
+
+## 👨‍💻 Developer
+
+**Maaz Ali** — BS Computer Science, NUML Islamabad
+- 🐙 GitHub: [@maazzalii](https://github.com/maazzalii)
+- 💼 LinkedIn: [maazzalii](https://linkedin.com/in/maazzalii)
+
+---
+
+> ⭐ Star this repo if you found it useful!
