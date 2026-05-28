@@ -39,7 +39,7 @@
 
 ### 1. Clone the repository
 ```bash
-git clone [https://github.com/maazzalii/maaz-ai-assistant](https://github.com/MaazzAlii/ai-voice-chatbot-python).git
+git clone [https://github.com/maazzalii/ai-voice-chatbot-python].git
 ```
 
 ### 2. Create a virtual environment
