@@ -1,4 +1,4 @@
-# 🎙️ Maaz AI Assistant — Voice-Powered AI Chat Agent
+# 🎙️Voice AI Assistant — Voice-Powered AI Chat Agent
 
 > A real-time, browser-based voice assistant powered by **Mistral AI** and the **Web Speech API**. Talk to it — it listens, thinks, and speaks back in a natural human voice. Built with Python + Streamlit.
 
@@ -39,7 +39,7 @@
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/maazzalii/maaz-ai-assistant.git
+git clone [https://github.com/maazzalii/maaz-ai-assistant](https://github.com/MaazzAlii/ai-voice-chatbot-python).git
 cd maaz-ai-assistant
 ```
 
